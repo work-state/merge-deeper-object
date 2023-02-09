@@ -1,9 +1,16 @@
 {
-  "name": "@ilyassmabrouk/merge-deeper-object",
+  "name": "@work-state/merge-deeper-object",
+  "repository": {
+    "url": "git@github.com:work-state/merge-deeper-object.git"
+  },
   "version": "0.0.1",
-  "description": "",
+  "description": "npm package to merge deep objects",
   "types": "./lib/cjs/types/index.d.ts",
   "main": "./lib/cjs/index.js",
+  "module": "./lib/esm/index.msj",
+  "files": [
+    "lib/**/*"
+  ],
   "scripts": {
     "clean": "rm -rf ./lib",
     "build": "npm run clean && npm run build:esm && npm run build:cjs",
@@ -27,9 +34,6 @@
       }
     }
   },
-  "files": [
-    "lib/**/*"
-  ],
   "dependencies": {
     "typescript": "^4.9.5"
   },
