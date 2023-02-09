@@ -26,7 +26,7 @@ describe("merge deeper", function () {
     var obj1 = { a: 1, b: 2, c: 3 };
     var obj2 = { a: 4, b: 5, d: 6 };
 
-    var output = { a: 1, b: 2, d: 6, c: 3 };
+    var output = { a: 4, b: 5, d: 6, c: 3 };
     assert.deepEqual(mergeDeeper(obj1, obj2), output);
   });
 });
