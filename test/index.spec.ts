@@ -1,6 +1,6 @@
 import { assert } from "chai";
 import "mocha";
-import { mergeDeeper } from "../src";
+import mergeDeeper from "../src";
 
 describe("merge deeper", function () {
   it("should merge object properties", function () {
@@ -14,19 +14,19 @@ describe("merge deeper", function () {
     assert.notDeepEqual(mergeDeeper(obj1, obj2), false_output);
   });
 
-  it("should do a deep merge", function () {
-    var obj1 = { a: { b: { c: "1" } }, d: { e: "2" } };
-    var obj2 = { a: { b: { g: "3" } }, d: { h: "4" } };
-
-    var output = { a: { b: { c: "1", g: "3" } }, d: { e: "2", h: "4" } };
-    assert.deepEqual(mergeDeeper(obj1, obj2), output);
-  });
-
   it("should not merge primitive values", function () {
     var obj1 = { a: 1, b: 2, c: 3 };
     var obj2 = { a: 4, b: 5, d: 6 };
 
     var output = { a: 4, b: 5, d: 6, c: 3 };
+    assert.deepEqual(mergeDeeper(obj1, obj2), output);
+  });
+
+  it("should do a deep merge", function () {
+    var obj1 = { a: { b: { c: "1" } }, d: { e: "2" } };
+    var obj2 = { a: { b: { c: "3", g: "3" } }, d: { h: "4" } };
+
+    var output = { a: { b: { c: "3", g: "3" } }, d: { e: "2", h: "4" } };
     assert.deepEqual(mergeDeeper(obj1, obj2), output);
   });
 });

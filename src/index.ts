@@ -1,7 +1,4 @@
-export const mergeDeeper = (
-  object: Record<any, any>,
-  merge: Record<any, any>
-) => {
+const mergeDeeper = (object: Record<any, any>, merge: Record<any, any>) => {
   if (!merge || typeof merge === "string") merge = {};
   [...Object.keys(merge), ...Object.getOwnPropertySymbols(merge)].map(
     (el: any) => {
@@ -22,3 +19,5 @@ export const mergeDeeper = (
   );
   return object;
 };
+
+export default mergeDeeper;
