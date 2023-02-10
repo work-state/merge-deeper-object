@@ -3,7 +3,7 @@ Combine the attributes of objects deeply. Compatible with both CommonJS (CJS) an
 
 ## Install
 ```
-npm install --save @work-state/merge-deeper-object
+npm install --save merge-deeper-object
 ```
 
 ## Running tests
@@ -14,7 +14,7 @@ npm run test
 
 ## Usage
 ```javascript
-var mergeDeeper = require('@work-state/merge-deeper-object')
+var mergeDeeper = require('merge-deeper-object')
 
 var obj1 = { a: { b: { c: 1 } }, d: "d", e: { f: true } }
 var obj2 = { a: { g: "g" }, d: "dd", e: { f: false }  }

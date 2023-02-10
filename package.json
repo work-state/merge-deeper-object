@@ -1,13 +1,19 @@
 {
-  "version": "0.1.0",
+  "version": "0.1.1",
   "author": "Ilyass Mabrouk",
   "license": "MIT",
-  "name": "@work-state/merge-deeper-object",
+  "name": "merge-deeper-object",
   "description": "Deep merge properties of objects. Support both CJS and ESM.",
   "homepage": "https://github.com/work-state/merge-deeper-object",
-  "repository": "work-state/merge-deeper-object",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/work-state/merge-deeper-object.git"
+  },
+  "bugs": {
+    "url": "https://github.com/work-state/merge-deeper-object/issues"
+  },
   "types": "./lib/cjs/types/index.d.ts",
-  "main": "./lib/cjs/index.js",
+  "main": "index.js",
   "module": "./lib/esm/index.msj",
   "files": [
     "lib/**/*"
@@ -70,5 +76,9 @@
     "chai": "^4.3.7",
     "mocha": "^10.2.0",
     "ts-node": "^10.9.1"
+  },
+  "directories": {
+    "lib": "lib",
+    "test": "test"
   }
 }
