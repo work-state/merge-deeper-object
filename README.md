@@ -1,6 +1,7 @@
 ## merge-deeper-object
 
 ---
+
 Combine the attributes of objects deeply. Compatible with both CommonJS (CJS) and ECMAScript Module (ESM) formats.
 
 ## Install
@@ -34,7 +35,7 @@ mergeDeeper(obj1, obj2)
 ```
 
 ## Author
-**Ilyass Mabrouk**
+[Ilyass Mabrouk](https://github.com/work-state)
 
 ## License
 [MIT](https://github.com/work-state/merge-deeper-object/blob/master/LICENSE.md)
