@@ -14,6 +14,7 @@ npm install --save @work-state/merge-deeper-object
 
 
 ```
+npm install
 npm run test
 ```
 
