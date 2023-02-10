@@ -1,27 +1,18 @@
 ## merge-deeper-object
-
----
-
 Combine the attributes of objects deeply. Compatible with both CommonJS (CJS) and ECMAScript Module (ESM) formats.
 
 ## Install
-
-
 ```
 npm install --save @work-state/merge-deeper-object
 ```
 
 ## Running tests
-
-
 ```
 npm install
 npm run test
 ```
 
 ## Usage
-
-
 ```javascript
 var mergeDeeper = require('@work-state/merge-deeper-object')
 
