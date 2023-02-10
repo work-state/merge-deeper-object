@@ -1,10 +1,11 @@
 {
-  "name": "@work-state/merge-deeper-object",
-  "repository": {
-    "url": "git@github.com:work-state/merge-deeper-object.git"
-  },
   "version": "0.0.1",
-  "description": "npm package to merge deep objects",
+  "author": "Ilyass Mabrouk",
+  "license": "MIT",
+  "name": "@work-state/merge-deeper-object",
+  "description": "Deep merge properties of objects. Support both CJS and ESM.",
+  "homepage": "https://github.com/work-state/merge-deeper-object",
+  "repository": "work-state/merge-deeper-object",
   "types": "./lib/cjs/types/index.d.ts",
   "main": "./lib/cjs/index.js",
   "module": "./lib/esm/index.msj",
@@ -19,9 +20,35 @@
     "prepack": "npm run build",
     "test": "mocha"
   },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
+  "keywords": [
+    "object",
+    "objects",
+    "nested",
+    "deep",
+    "deeper",
+    "merge",
+    "combine",
+    "clone deep",
+    "keys",
+    "key",
+    "values",
+    "value",
+    "properties",
+    "property",
+    "entries",
+    "entry"
+  ],
+  "verb": {
+    "tasks": [
+      "readme"
+    ],
+    "reflinks": [
+      "verb"
+    ],
+    "lint": {
+      "reflinks": true
+    }
+  },
   "exports": {
     ".": {
       "import": {
