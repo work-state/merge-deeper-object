@@ -1,5 +1,5 @@
 {
-  "version": "0.1.3",
+  "version": "0.1.4",
   "author": "Ilyass Mabrouk",
   "license": "MIT",
   "name": "merge-deeper-object",
@@ -14,6 +14,7 @@
   },
   "main": "index.js",
   "files": [
+    "index.d.ts",
     "index.js"
   ],
   "types": "index.d.ts",
