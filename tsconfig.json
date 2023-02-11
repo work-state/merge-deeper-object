@@ -1,0 +1,10 @@
+{
+  "include": ["."],
+  "compilerOptions": {
+    "allowJs": true,
+    "declaration": true,
+    "emitDeclarationOnly": true,
+    "outDir": ".",
+    "declarationMap": true
+  }
+}
