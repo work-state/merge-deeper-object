@@ -1,5 +1,5 @@
 ## merge-deeper-object
-Combine the attributes of objects deeply. Compatible with both CommonJS (CJS) and ECMAScript Module (ESM) formats.
+Combine the attributes of objects deeply.
 
 ## Install
 ```

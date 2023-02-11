@@ -1,6 +1,6 @@
-import { assert } from "chai";
-import "mocha";
-import mergeDeeper from "../src";
+var assert = require("chai").assert;
+require("mocha");
+const mergeDeeper = require(".");
 
 describe("merge deeper", function () {
   it("should merge object properties", function () {

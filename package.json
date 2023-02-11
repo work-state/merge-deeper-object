@@ -3,7 +3,7 @@
   "author": "Ilyass Mabrouk",
   "license": "MIT",
   "name": "merge-deeper-object",
-  "description": "Deep merge properties of objects. Support both CJS and ESM.",
+  "description": "Deep merge properties of objects.",
   "homepage": "https://github.com/work-state/merge-deeper-object",
   "repository": {
     "type": "git",
@@ -12,18 +12,11 @@
   "bugs": {
     "url": "https://github.com/work-state/merge-deeper-object/issues"
   },
-  "types": "./lib/cjs/types/index.d.ts",
   "main": "index.js",
-  "module": "./lib/esm/index.msj",
   "files": [
-    "lib/**/*"
+    "index.js"
   ],
   "scripts": {
-    "clean": "rm -rf ./lib",
-    "build": "npm run clean && npm run build:esm && npm run build:cjs",
-    "build:esm": "tsc -p ./config/tsconfig.esm.json && mv lib/esm/index.js lib/esm/index.mjs",
-    "build:cjs": "tsc -p ./config/tsconfig.cjs.json",
-    "prepack": "npm run build",
     "test": "mocha"
   },
   "keywords": [
@@ -55,30 +48,12 @@
       "reflinks": true
     }
   },
-  "exports": {
-    ".": {
-      "import": {
-        "types": "./lib/esm/types/index.d.ts",
-        "default": "./lib/esm/index.mjs"
-      },
-      "require": {
-        "types": "./lib/cjs/types/index.d.ts",
-        "default": "./lib/cjs/index.js"
-      }
-    }
-  },
-  "dependencies": {
-    "typescript": "^4.9.5"
-  },
+  "dependencies": {},
   "devDependencies": {
-    "@types/chai": "^4.3.4",
-    "@types/mocha": "^10.0.1",
     "chai": "^4.3.7",
-    "mocha": "^10.2.0",
-    "ts-node": "^10.9.1"
+    "mocha": "^10.2.0"
   },
   "directories": {
-    "lib": "lib",
     "test": "test"
   }
 }
