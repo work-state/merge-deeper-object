@@ -107,4 +107,6 @@ dist
 .DS_Store
 lib
 *.tgz
+
+# IDE
 .idea/
