@@ -3,7 +3,8 @@ module.exports = function mergeDeeper(object, merge) {
   [...Object.keys(merge), ...Object.getOwnPropertySymbols(merge)].map((el) => {
     if (
       typeof merge[el] !== typeof object[el] ||
-      (typeof merge[el] && typeof object[el]) !== "object"
+      (typeof merge[el] && typeof object[el]) !== "object" ||
+      !merge[el]
     )
       object[el] = merge[el];
 
