@@ -7,6 +7,8 @@ module.exports = function mergeDeeper(object, merge) {
       !merge[el]
     )
       object[el] = merge[el];
+    else if (Array.isArray(object[el]) && Array.isArray(merge[el]))
+      merge[el] = [...object[el], ...merge[el]];
 
     if (!(el in object))
       object[el] =

@@ -23,10 +23,10 @@ describe("merge deeper", function () {
   });
 
   it("should do a deep merge", function () {
-    var obj1 = { a: { b: { c: "1" } }, d: { e: "2" } };
-    var obj2 = { a: { b: { c: "3", g: "3" } }, d: { h: "4" } };
+    var obj1 = { a: { b: { c: "1" } }, d: [{ e: "2" }] };
+    var obj2 = { a: { b: { c: "5", g: "3" } }, d: [{ h: "4" }] };
 
-    var output = { a: { b: { c: "3", g: "3" } }, d: { e: "2", h: "4" } };
+    var output = { a: { b: { c: "5", g: "3" } }, d: [{ e: "2" }, { h: "4" }] };
     assert.deepEqual(mergeDeeper(obj1, obj2), output);
   });
 });
