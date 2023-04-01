@@ -1,22 +1,17 @@
 module.exports = function mergeDeeper(object, merge) {
   if (!merge || typeof merge === "string") merge = {};
-  [...Object.keys(merge), ...Object.getOwnPropertySymbols(merge)].map((el) => {
-    if (el in object && Array.isArray(merge[el]) && Array.isArray(object[el])) {
-      object[el] = [...object[el], ...merge[el]];
-      mergeDeeper([], []);
+  [...Object.keys(merge), ...Object.getOwnPropertySymbols(merge)].map((key) => {
+    if (Array.isArray(merge[key]) && Array.isArray(object[key])) {
+      object[key] = [...object[key], ...merge[key]];
     } else {
       if (
-        typeof merge[el] !== typeof object[el] ||
-        (typeof merge[el] && typeof object[el]) !== "object" ||
-        !merge[el]
-      )
-        object[el] = merge[el];
-      if (!(el in object))
-        object[el] =
-          typeof merge[el] === "object" && !Array.isArray(merge[el])
-            ? { ...merge[el] }
-            : merge[el];
-      mergeDeeper(object[el], merge[el]);
+        key in object &&
+        (typeof merge[key] && typeof object[key]) === "object"
+      ) {
+        mergeDeeper(object[key], merge[key]);
+      } else {
+        object[key] = merge[key];
+      }
     }
   });
   return object;
