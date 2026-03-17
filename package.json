@@ -2,7 +2,7 @@
   "version": "1.0.0",
   "author": "Ilyass Mabrouk",
   "license": "MIT",
-  "name": "Merge deeper object",
+  "name": "merge-deeper-object",
   "description": "Deep merge utility for nested objects.",
   "homepage": "https://github.com/work-state/merge-deeper-object",
   "repository": {
