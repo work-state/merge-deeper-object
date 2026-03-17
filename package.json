@@ -1,9 +1,9 @@
 {
-  "version": "0.2.0",
+  "version": "1.0.0",
   "author": "Ilyass Mabrouk",
   "license": "MIT",
-  "name": "merge-deeper-object",
-  "description": "Deep merge properties of objects.",
+  "name": "Merge deeper object",
+  "description": "Deep merge utility for nested objects.",
   "homepage": "https://github.com/work-state/merge-deeper-object",
   "repository": {
     "type": "git",
@@ -12,14 +12,19 @@
   "bugs": {
     "url": "https://github.com/work-state/merge-deeper-object/issues"
   },
-  "main": "index.js",
-  "files": [
-    "index.d.ts",
-    "index.js"
-  ],
-  "types": "index.d.ts",
+  "exports": {
+    ".": {
+      "import": "./dist/index.mjs",
+      "require": "./dist/index.cjs"
+    }
+  },
+  "main": "dist/index.cjs",
+  "module": "dist/index.mjs",
+  "files": ["dist"],
   "scripts": {
-    "test": "mocha"
+    "test": "vitest run",
+    "build": "rollup -c",
+    "prepublishOnly": "npm run build && npm run test"
   },
   "keywords": [
     "object",
@@ -37,7 +42,8 @@
     "properties",
     "property",
     "entries",
-    "entry"
+    "entry",
+    "recursive"
   ],
   "verb": {
     "tasks": [
@@ -51,10 +57,10 @@
     }
   },
   "devDependencies": {
-    "chai": "^4.3.7",
-    "mocha": "^10.2.0"
+    "rollup": "^4.59.0",
+    "vitest": "^4.1.0"
   },
-  "directories": {
-    "test": "test"
+  "engines": {
+    "node": ">=14"
   }
 }
