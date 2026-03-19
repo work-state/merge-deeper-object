@@ -15,7 +15,7 @@ export default function mergeDeeper(target, source) {
 
   for (const key of [
     ...Object.keys(source),
-    ...Object.getOwnPropertySymbols(source)
+    ...Object.getOwnPropertySymbols(source),
   ]) {
     if (!isSafe(key)) continue;
 
